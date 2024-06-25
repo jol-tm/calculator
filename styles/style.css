@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+
+body {
+    font-family: 'Jost';
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+}
+
+main {
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: lightskyblue;
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    border-radius: 50%;
+    transition: .3s;
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2rem lightskyblue;
+}
+button:active {
+    scale: .9;
+}
+
+.oprs {
+    background-color: lightseagreen;
+}
+.oprs:hover {
+    box-shadow: 0 0 2rem lightseagreen;
+}
+#clear {
+    background-color: lightcoral;
+}
+#clear:hover {
+    box-shadow: 0 0 2rem lightcoral;
+}
+#equal {
+    background-color: lightgreen;
+}
+#equal:hover {
+    box-shadow: 0 0 2rem lightgreen;
+}
+
+input {
+    font-size: inherit;
+    background-color: transparent;
+    color: inherit;
+    text-align: end;
+    width: 22rem;
+    height: 3rem;
+    border: 3px solid rgb(0, 190, 255);
+    border-radius: .7rem;
+    outline: none;
+    transition: .3s;
+}
+input:focus {
+    box-shadow: 0 0 2rem rgb(0, 190, 255);
+}
+
+.numbtns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 23rem;
+}
