@@ -8,7 +8,7 @@ body {
 }
 
 main {
-    height: 90vh;
+    height: 95vh;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,8 @@ button:active {
 }
 #equal {
     background-color: lightgreen;
+    width: 11rem;
+    border-radius: 2rem;
 }
 #equal:hover {
     box-shadow: 0 0 2rem lightgreen;
@@ -70,10 +72,10 @@ input:focus {
     box-shadow: 0 0 2rem rgb(0, 190, 255);
 }
 
-.numbtns {
+.btns {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     gap: 1rem;
     width: 23rem;
 }
