@@ -11,14 +11,13 @@ let input = '';
 
 function calc(k) {
     if ($(this).attr('value') == 'c') {
-        $('#display').val('');
         input = '';
     } else if ($(this).attr('value') == '=' || k.code == 'Enter') {
-        $('#display').val(eval($('#display').val().replace('X', 'x').replace('x', '*').replace('÷', '/').replace(',', '.')));
-        input = '';
+        input = $('#display').val();
+        input = eval(input.toLowerCase().replace('x', '*').replace('÷', '/').replace(',', '.'));
+        $('#display').focus();
     } else {
         input += $(this).attr('value');
-        $('#display').val(input);
-    }
-
+    } 
+    $('#display').val(input);
 }

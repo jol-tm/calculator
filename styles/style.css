@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
 
+@media only screen and (min-width : 0px) {
+    main {
+        scale: .8;
+    }
+}
+@media only screen and (min-width : 768px) {
+    main {
+        scale: 1;
+    }
+}
+
 body {
     font-family: 'Jost';
     font-size: 2rem;
+    margin: 0;
     background-color: black;
     color: white;
 }
 
 main {
-    height: 95vh;
-    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    height: 100vh;
 }
 
 button {
@@ -61,8 +72,9 @@ input {
     background-color: transparent;
     color: inherit;
     text-align: end;
-    width: 22rem;
-    height: 3rem;
+    width: 20rem;
+    height: 2rem;
+    padding: 1rem;
     border: 3px solid rgb(0, 190, 255);
     border-radius: .7rem;
     outline: none;
