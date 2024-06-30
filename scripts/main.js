@@ -13,16 +13,24 @@ $(document).ready(function() {
 let input = '';
 
 function calc(k) {
+    let btnval =  $(this).attr('value');
     input = $('#display').val();
-    if ($(this).attr('value') == '=' || k.code == 'Enter' && input != '') {
-        input = eval(input.toLowerCase().replace('x', '*').replace('÷', '/').replace('^', '**').replace(',', '.'));
+
+    if (btnval == '=' || k.code == 'Enter' && input != '') {
+        input = eval(input.toLowerCase().replaceAll('x', '*').replaceAll('÷', '/').replaceAll('^', '**').replaceAll(',', '.'));
         $('#display').css('boxShadow', '0 0 2rem rgb(0, 190, 255)');
-    } else if ($(this).attr('value') == 'c') {
+    } else if (btnval == 'c') {
         input = '';
         $('#display').css('boxShadow', 'none');
     } else {
-        input += $(this).attr('value');
+        input += btnval;
         $('#display').css('boxShadow', 'none');
+
+        if (btnval == '(') {
+            $(this).attr('value', ')');
+        } else if (btnval == ')') {
+            $(this).attr('value', '(');
+        }
     } 
     $('#display').val(input);
 }
