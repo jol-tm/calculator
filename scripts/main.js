@@ -3,10 +3,10 @@ $(document).ready(function() {
     $('#display').on('keypress', function(k) {calc(k)});
     $('button').on('click', calc);
     // Handle the btn press effect 
-    $('button').on('mousedown', function(e){
+    $('button').on('mousedown touchstart', function(e){
         $(this).css({'boxShadow': 'var(--neuro-sdw-press)', 'scale': .9});
     });
-    $('button').on('mouseup mouseout', function(e){
+    $('button').on('mouseup mouseout touchend', function(e){
         curTheme == 'light' ? $(this).css('boxShadow', 'var(--neuro-sdw)') : $(this).css('boxShadow', 'var(--neuro-sdw-dk)');
         $(this).css('scale', 1)
     });
